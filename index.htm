@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        .container {
+            padding: 2em;
+            border: 1px solid black;
+            max-height: 25ch;
+            width: 66%;
+            overflow-y: hidden;
+            transition: max-height 2s ease;
+        }
+        .open{
+            max-height: 100ch;
+        }
+        .close{
+            max-height: 25ch;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box" class="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolorum dolore distinctio ut facilis
+            doloremque iusto, sint amet adipisci enim optio, fugit commodi quam ducimus veritatis veniam excepturi
+            expedita? Cum.
+            Voluptatibus quas deserunt voluptas ea? Aperiam nulla, labore aliquid vel non optio consequuntur. Quos
+            exercitationem vitae quisquam similique soluta quasi cum architecto ipsa. Accusantium incidunt illo, laborum
+            officiis veritatis quis!
+            Vel quas adipisci modi excepturi tempora facilis consequuntur non placeat dicta libero doloribus praesentium
+            deserunt, cupiditate expedita magnam nisi consectetur suscipit beatae animi voluptates quia perferendis!
+            Blanditiis adipisci ullam facilis?
+            Enim quae corrupti ipsum modi eligendi tempora quos aliquam voluptatum consequuntur aliquid sed consequatur
+            obcaecati culpa exercitationem reiciendis, nostrum, ullam sunt delectus. Quae atque omnis dolores expedita
+            adipisci excepturi tempora!
+            Iusto architecto reiciendis a dolore aperiam omnis, natus blanditiis. Voluptatibus doloribus distinctio
+            temporibus ullam, ipsum molestiae sunt reiciendis totam illum laudantium provident laboriosam cupiditate?
+        </p>
+
+    </div>
+    <button onclick="toggleView(event)">Open</button>
+
+    <script>
+        function toggleView(event) {
+            box = document.getElementById("box");
+
+            if (box.classList.contains("open")) {
+                box.classList.remove("open");
+                box.classList.add("close");
+                event.target.innerText = "Open";
+
+            }
+            else {
+                box.classList.add("open");
+                box.classList.remove("close");
+                event.target.innerText = "Close";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
